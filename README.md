@@ -5,3 +5,5 @@ They are built on top of micromamba (https://github.com/mamba-org/micromamba-doc
 They are minimalist by design and can be either used as they are or serve as an inspiration source. 
 
 As for now, only a limited number of dockers will be build to serve as scitq examples.
+
+They are published on Docker hub: https://hub.docker.com/r/gmtscience
