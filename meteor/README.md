@@ -27,11 +27,11 @@ with gzip.open('IGC2.fna.gz','rt',encoding='utf-8') as source:
             for line in source.readlines():
                 if line.startswith('>'):
                     name=line[1:].strip()
-                    reindex.write(f'>{n}\n')
+                    reindexed.write(f'>{n}\n')
                     index.write(f'{n}\t{name}\n')
                     n += 1
                 else:
-                    reindex.write(line)
+                    reindexed.write(line)
 ```
 
 
