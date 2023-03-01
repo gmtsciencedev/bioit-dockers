@@ -7,11 +7,11 @@ A simple metaphlan 4.0.5 (and not humann) docker.
 
 ## changelog
 
-### v4.0.3.1
-Metaphlan updated to 4.0.3, updated humann to 3.6 and combine-csv added (used to create synthesis when using GTDB conversion)
-
 ### v4.0.5
 Updated metaphlan to 4.0.5, and base to mamba-py29 v1.1.0c (which include GNU parallel)
+
+### v4.0.3.1
+Metaphlan updated to 4.0.3, updated humann to 3.6 and combine-csv added (used to create synthesis when using GTDB conversion)
 
 ## databases
 
