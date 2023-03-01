@@ -2,13 +2,30 @@
 
 Source: https://github.com/gmtsciencedev/bioit-dockers
 
-A simple metaphlan 4.0.3 + humann 3.6 docker
+A simple metaphlan 4.0.5 (and not humann) docker.
+/!\ Humann 3.6 does not work (yet?) in latest version: use our docker version 4.0.3.1 for humann.
+
+## changelog
+
+### v4.0.3.1
+Metaphlan updated to 4.0.3, updated humann to 3.6 and combine-csv added (used to create synthesis when using GTDB conversion)
+
+### v4.0.5
+Updated metaphlan to 4.0.5, and base to mamba-py29 v1.1.0c (which include GNU parallel)
 
 ## databases
 
 databases are two big to stay in docker so we propose to download them from Zenodo:
 
-Metaphan resource: https://zenodo.org/record/7537081#.Y8LBN6fP1Bs
+### Metaphlan latest version
+
+Metaphlan resource: https://zenodo.org/record/7689167#.Y_-EaoDP1Bs
+
+### Metaphlan 4.0.3 and Humann
+
+AFAWK, Humann is not compatible with Metaphlan 4.0.5, you must use our previous release of this docker (4.0.3.1) together with these resources:
+
+Metaphlan resource: https://zenodo.org/record/7537081#.Y8LBN6fP1Bs
 
 Humann resource: https://zenodo.org/record/7536792#.Y8KXPqfP1Bs
 
@@ -41,4 +58,4 @@ tar cvzf humann.tgz humann
 aws s3 cp humann.tgz s3://path/to/resource/humann.tgz
 ```
 
-And when launching a scitq task, do not forget to add the resource with `-r s3://path/to/resource/humann.tgz`
+And when launching a scitq task, do not forget to add the resource with `-r s3://path/to/resource/humann.tgz -r s3://path/to/resource/metaphlan4.tgz`

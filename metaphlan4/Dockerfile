@@ -1,7 +1,7 @@
-FROM mamba-py39:1.1.0b
+FROM gmtscience/mamba-py39:1.1.0c
 USER root
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
-RUN micromamba install -c conda-forge -c bioconda -c biobakery metaphlan=4.0.3 humann=3.6 seqtk=1.3 && \
+RUN micromamba install -c conda-forge -c bioconda -c biobakery metaphlan=4.0.5 humann=3.6 seqtk=1.3 && \
     micromamba clean --all --yes
 
 RUN humann_config --update database_folders nucleotide /resource/humann/chocophlan
